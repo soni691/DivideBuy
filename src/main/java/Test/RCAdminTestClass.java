@@ -1,18 +1,15 @@
 package main.java.Test;
 
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import main.java.Base.*;
 import main.java.pages.*;
 
-public class TestClass extends BaseTest {
-	@Test(enabled=false)
-	public void CRMLogin() {
-		CRMLogin crmLogin = new CRMLogin();
-		crmLogin.enterEmail();
-		crmLogin.enterPassword();
-		crmLogin.clickonLogin();
-	}
+public class RCAdminTestClass extends BaseTest {
+	
+	@Parameters({ "url" })
 	@Test
 	public void RCAdmiLogin() {
 		RCadmin rcadminLogin = new RCadmin();
@@ -20,5 +17,5 @@ public class TestClass extends BaseTest {
 		rcadminLogin.enterPassword();
 		rcadminLogin.clickonRCALogin();
 	}
-
+	
 }

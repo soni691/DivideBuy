@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="15201" started-at="2021-11-28T13:17:06 IST" finished-at="2021-11-28T13:17:21 IST">
+  <suite name="Suite" duration-ms="28407" started-at="2021-11-28T17:23:44 IST" finished-at="2021-11-28T17:24:12 IST">
     <groups>
     </groups>
-    <test name="DivideBuy Test Automation" duration-ms="15201" started-at="2021-11-28T13:17:06 IST" finished-at="2021-11-28T13:17:21 IST">
-      <class name="main.java.Test.TestClass">
-        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.TestClass@7403c468]" name="Report" is-config="true" duration-ms="313" started-at="2021-11-28T13:17:06 IST" finished-at="2021-11-28T13:17:06 IST">
+    <test name="DivideBuy Test Automation CRM" duration-ms="12774" started-at="2021-11-28T17:23:44 IST" finished-at="2021-11-28T17:23:56 IST">
+      <class name="main.java.Test.CRMTestClass">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.CRMTestClass@7403c468]" name="Report" is-config="true" duration-ms="162" started-at="2021-11-28T17:23:44 IST" finished-at="2021-11-28T17:23:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.TestClass@7403c468]" name="initializeBrowser" is-config="true" duration-ms="10226" started-at="2021-11-28T13:17:06 IST" finished-at="2021-11-28T13:17:16 IST">
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.CRMTestClass@7403c468]" name="initializeBrowser" is-config="true" duration-ms="8553" started-at="2021-11-28T17:23:44 IST" finished-at="2021-11-28T17:23:52 IST">
           <params>
             <param index="0">
               <value>
@@ -20,33 +20,141 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void main.java.Test.TestClass.RCAdmiLogin()]]>
+                <![CDATA[https://crm.dividebuysandbox.co.uk]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void main.java.Test.CRMTestClass.CRMLogin(java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="RCAdmiLogin()[pri:0, instance:main.java.Test.TestClass@7403c468]" name="RCAdmiLogin" duration-ms="3005" started-at="2021-11-28T13:17:16 IST" finished-at="2021-11-28T13:17:19 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RCAdmiLogin -->
-        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.TestClass@7403c468]" name="driverQuit" is-config="true" duration-ms="985" started-at="2021-11-28T13:17:19 IST" finished-at="2021-11-28T13:17:20 IST">
+        <test-method status="PASS" signature="CRMLogin(java.lang.String)[pri:0, instance:main.java.Test.CRMTestClass@7403c468]" name="CRMLogin" duration-ms="2744" started-at="2021-11-28T17:23:52 IST" finished-at="2021-11-28T17:23:55 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RCAdmiLogin status=SUCCESS method=TestClass.RCAdmiLogin()[pri:0, instance:main.java.Test.TestClass@7403c468] output={null}]]]>
+                <![CDATA[https://crm.dividebuysandbox.co.uk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CRMLogin -->
+        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.CRMTestClass@7403c468]" name="driverQuit" is-config="true" duration-ms="775" started-at="2021-11-28T17:23:55 IST" finished-at="2021-11-28T17:23:56 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CRMLogin status=SUCCESS method=CRMTestClass.CRMLogin(java.lang.String)[pri:0, instance:main.java.Test.CRMTestClass@7403c468] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.TestClass@7403c468]" name="flushReport" is-config="true" duration-ms="591" started-at="2021-11-28T13:17:20 IST" finished-at="2021-11-28T13:17:21 IST">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.CRMTestClass@7403c468]" name="flushReport" is-config="true" duration-ms="498" started-at="2021-11-28T17:23:56 IST" finished-at="2021-11-28T17:23:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- main.java.Test.TestClass -->
-    </test> <!-- DivideBuy Test Automation -->
+      </class> <!-- main.java.Test.CRMTestClass -->
+    </test> <!-- DivideBuy Test Automation CRM -->
+    <test name="DivideBuy Test Automation Portal" duration-ms="7656" started-at="2021-11-28T17:23:56 IST" finished-at="2021-11-28T17:24:04 IST">
+      <class name="main.java.Test.PortalTestClass">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.PortalTestClass@fcd6521]" name="Report" is-config="true" duration-ms="7" started-at="2021-11-28T17:23:56 IST" finished-at="2021-11-28T17:23:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.PortalTestClass@fcd6521]" name="initializeBrowser" is-config="true" duration-ms="6372" started-at="2021-11-28T17:23:56 IST" finished-at="2021-11-28T17:24:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://portal.dividebuysandbox.co.uk/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void main.java.Test.PortalTestClass.PortalLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method status="PASS" signature="PortalLogin()[pri:0, instance:main.java.Test.PortalTestClass@fcd6521]" name="PortalLogin" duration-ms="454" started-at="2021-11-28T17:24:03 IST" finished-at="2021-11-28T17:24:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PortalLogin -->
+        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.PortalTestClass@fcd6521]" name="driverQuit" is-config="true" duration-ms="753" started-at="2021-11-28T17:24:03 IST" finished-at="2021-11-28T17:24:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PortalLogin status=SUCCESS method=PortalTestClass.PortalLogin()[pri:0, instance:main.java.Test.PortalTestClass@fcd6521] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.PortalTestClass@fcd6521]" name="flushReport" is-config="true" duration-ms="65" started-at="2021-11-28T17:24:04 IST" finished-at="2021-11-28T17:24:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- main.java.Test.PortalTestClass -->
+    </test> <!-- DivideBuy Test Automation Portal -->
+    <test name="DivideBuy Test Automation RCAdmin" duration-ms="7929" started-at="2021-11-28T17:24:04 IST" finished-at="2021-11-28T17:24:12 IST">
+      <class name="main.java.Test.RCAdminTestClass">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3]" name="Report" is-config="true" duration-ms="4" started-at="2021-11-28T17:24:04 IST" finished-at="2021-11-28T17:24:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3]" name="initializeBrowser" is-config="true" duration-ms="5334" started-at="2021-11-28T17:24:04 IST" finished-at="2021-11-28T17:24:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://rcadminsandbox.co.uk/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void main.java.Test.RCAdminTestClass.RCAdmiLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method status="PASS" signature="RCAdmiLogin()[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3]" name="RCAdmiLogin" duration-ms="1684" started-at="2021-11-28T17:24:09 IST" finished-at="2021-11-28T17:24:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RCAdmiLogin -->
+        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3]" name="driverQuit" is-config="true" duration-ms="846" started-at="2021-11-28T17:24:11 IST" finished-at="2021-11-28T17:24:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RCAdmiLogin status=SUCCESS method=RCAdminTestClass.RCAdmiLogin()[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.RCAdminTestClass@4fcd19b3]" name="flushReport" is-config="true" duration-ms="55" started-at="2021-11-28T17:24:12 IST" finished-at="2021-11-28T17:24:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- main.java.Test.RCAdminTestClass -->
+    </test> <!-- DivideBuy Test Automation RCAdmin -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -55,12 +55,12 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	@Parameters(value={"browserName"})
-	public void initializeBrowser(String browserName, Method testMethod) {
+	@Parameters(value={"browserName", "url" })
+	public void initializeBrowser(String browserName, String url,Method testMethod) {
 		logger= extent.createTest(testMethod.getName());
 		setupDriver(browserName);
 		driver.manage().window().maximize();
-		driver.get(Constants.RCAdminurl);
+		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
 	
