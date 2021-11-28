@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="main.java.utils.SuiteListner"/>
+  </listeners>
+  <test thread-count="5" name="DivideBuy Test Automation(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="main.java.Test.TestClass">
+        <methods>
+          <include name="RCAdmiLogin"/>
+          <include name="driverQuit"/>
+          <include name="flushReport"/>
+          <include name="Report"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- main.java.Test.TestClass -->
+    </classes>
+  </test> <!-- DivideBuy Test Automation(failed) -->
+</suite> <!-- Failed suite [Suite] -->
