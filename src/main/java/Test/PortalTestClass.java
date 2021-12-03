@@ -9,12 +9,13 @@ import main.java.pages.*;
 
 public class PortalTestClass extends BaseTest {
 	@Parameters({ "url" })
-	@Test
-	public void PortalLogin() {
+	@Test(enabled=false)
+	public void PortalLogin() throws InterruptedException {
 		Portal portal= new Portal();
 		portal.enterPortalEmail();
 		portal.enterPortalPassword();
 		portal.enterPortalPIN();
 		portal.clickonPortalLogin();
+		portal.Portallogout();
 	}
 }

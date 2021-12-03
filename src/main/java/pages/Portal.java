@@ -1,5 +1,7 @@
 package main.java.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import main.java.Base.BaseTest;
@@ -13,6 +15,10 @@ public class Portal extends BaseTest {
 		//ElelmentFetch elementFtech = new ElelmentFetch();
 		BaseTest.logger.info("Clicking on Signin Button");
 		elementFtech.getWebElement("XPATH", PortalPageElements.Portallogin).click();
+		//To assert Portal login page
+		String TxtBoxContent = driver.findElement(By.xpath("//button[@id='btnSave']")).getText();
+		System.out.println(TxtBoxContent);
+		Assert.assertEquals(TxtBoxContent,"Add New Retailer");
 	}
 	
 	public void enterPortalEmail() {
@@ -29,5 +35,11 @@ public class Portal extends BaseTest {
 		elementFtech.getWebElement("XPATH", PortalPageElements.PoratlPin2box).sendKeys("2");
 		elementFtech.getWebElement("XPATH", PortalPageElements.PoratlPin3box).sendKeys("3");
 		elementFtech.getWebElement("XPATH", PortalPageElements.PoratlPin4box).sendKeys("4");
+	}
+	
+	public void Portallogout() throws InterruptedException {
+		BaseTest.logger.info("clicking on logout");
+		elementFtech.getWebElement("XPATH", PortalPageElements.Portallogout).click();
+		Thread.sleep(2000);
 	}
 }

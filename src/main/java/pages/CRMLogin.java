@@ -21,4 +21,11 @@ public class CRMLogin {
 		BaseTest.logger.info("Entering Password");
 		elementFtech.getWebElement("XPATH", CRMLoginPageElements.password).sendKeys("DivideBuy2019");
 	}
+	public void CRMLogout() {
+		//ElelmentFetch elementFtech = new ElelmentFetch();
+		BaseTest.logger.info("Clicking on Settings options");
+		elementFtech.getWebElement("XPATH", CRMLoginPageElements.Settings).click();
+		BaseTest.logger.info("Clicking on Logout option");
+		elementFtech.getWebElement("XPATH", CRMLoginPageElements.Logout).click();
+	}
 }

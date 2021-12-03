@@ -25,5 +25,12 @@
 			<class name="main.java.Test.RCAdminTestClass" />
 		</classes>
 	</test>
+	<test name="DivideBuy Test Automation Checkout">
+		<parameter name="browserName" value="chrome" />
+		<parameter name="url" value="https://moduleinstalledmagento1.dbuytest.info/" />
+		<classes>
+			<class name="main.java.Test.CheckoutTestClass" />
+		</classes>
+	</test>
 
 </suite> <!-- Suite -->

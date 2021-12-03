@@ -4,49 +4,19 @@
   <listeners>
     <listener class-name="main.java.utils.SuiteListner"/>
   </listeners>
-  <test thread-count="5" name="DivideBuy Test Automation CRM(failed)">
+  <test thread-count="5" name="DivideBuy Test Automation Checkout(failed)">
     <parameter name="browserName" value="chrome"/>
-    <parameter name="url" value="https://crm.dividebuysandbox.co.uk"/>
+    <parameter name="url" value="https://moduleinstalledmagento1.dbuytest.info/"/>
     <classes>
-      <class name="main.java.Test.CRMTestClass">
+      <class name="main.java.Test.CheckoutTestClass">
         <methods>
           <include name="driverQuit"/>
-          <include name="flushReport"/>
-          <include name="Report"/>
-          <include name="CRMLogin"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- main.java.Test.CRMTestClass -->
-    </classes>
-  </test> <!-- DivideBuy Test Automation CRM(failed) -->
-  <test thread-count="5" name="DivideBuy Test Automation Portal(failed)">
-    <parameter name="browserName" value="chrome"/>
-    <parameter name="url" value="https://portal.dividebuysandbox.co.uk/"/>
-    <classes>
-      <class name="main.java.Test.PortalTestClass">
-        <methods>
-          <include name="driverQuit"/>
-          <include name="flushReport"/>
-          <include name="Report"/>
-          <include name="PortalLogin"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- main.java.Test.PortalTestClass -->
-    </classes>
-  </test> <!-- DivideBuy Test Automation Portal(failed) -->
-  <test thread-count="5" name="DivideBuy Test Automation RCAdmin(failed)">
-    <parameter name="browserName" value="chrome"/>
-    <parameter name="url" value="https://rcadminsandbox.co.uk/"/>
-    <classes>
-      <class name="main.java.Test.RCAdminTestClass">
-        <methods>
-          <include name="driverQuit"/>
+          <include name="Checkout"/>
           <include name="flushReport"/>
           <include name="Report"/>
           <include name="initializeBrowser"/>
-          <include name="RCAdmiLogin"/>
         </methods>
-      </class> <!-- main.java.Test.RCAdminTestClass -->
+      </class> <!-- main.java.Test.CheckoutTestClass -->
     </classes>
-  </test> <!-- DivideBuy Test Automation RCAdmin(failed) -->
+  </test> <!-- DivideBuy Test Automation Checkout(failed) -->
 </suite> <!-- Failed suite [Suite] -->

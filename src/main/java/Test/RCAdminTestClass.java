@@ -10,12 +10,13 @@ import main.java.pages.*;
 public class RCAdminTestClass extends BaseTest {
 	
 	@Parameters({ "url" })
-	@Test
+	@Test(enabled=false)
 	public void RCAdmiLogin() {
 		RCadmin rcadminLogin = new RCadmin();
 		rcadminLogin.enterEmail();
 		rcadminLogin.enterPassword();
 		rcadminLogin.clickonRCALogin();
+		rcadminLogin.Rcadminlogout();
 	}
 	
 }

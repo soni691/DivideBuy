@@ -14,12 +14,13 @@ public class CRMTestClass extends BaseTest {
 	 * "https://rcadminsandbox.co.uk/" } }; }
 	 */
 	
-	@Test
+	@Test(enabled=false)
 	@Parameters({ "url" })
 	public void CRMLogin(String url) {
 		CRMLogin crmLogin = new CRMLogin();
 		crmLogin.enterEmail();
 		crmLogin.enterPassword();
 		crmLogin.clickonLogin();
+		crmLogin.CRMLogout();
 	}
 }

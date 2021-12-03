@@ -8,4 +8,6 @@ public interface PortalPageElements {
 	String PoratlPin2box="//input[@id='pin1']";
 	String PoratlPin3box="//input[@id='pin2']";
 	String PoratlPin4box= "//input[@id='pin3']";
+	String PortalAddRetailerbutton= "//button[@id='btnSave']";
+	String Portallogout="//span[@class='switch checked switch-small']";
 }

@@ -25,5 +25,9 @@ public class RCadmin extends BaseTest{
 		BaseTest.logger.info("Entering RCAdmin Password");
 		elementFtech.getWebElement("XPATH", RCadminPageElements.RCAdminpassword).sendKeys("Admin@123");
 	}
+	public void Rcadminlogout() {
+		BaseTest.logger.info("Clicking on logout");
+		elementFtech.getWebElement("XPATH", RCadminPageElements.RCAminlogout).click();
+	}
 
 }
