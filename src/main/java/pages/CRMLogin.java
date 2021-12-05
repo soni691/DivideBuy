@@ -15,11 +15,11 @@ public class CRMLogin {
 	
 	public void enterEmail() {
 		BaseTest.logger.info("Entering EmailId");
-		elementFtech.getWebElement("XPATH", CRMLoginPageElements.EmailAddress).sendKeys("systemadmin@dividebuy.co.uk");
+		elementFtech.getWebElement("XPATH", CRMLoginPageElements.EmailAddress).sendKeys("admin@dividebuy.co.uk");
 	}
 	public void enterPassword() {
 		BaseTest.logger.info("Entering Password");
-		elementFtech.getWebElement("XPATH", CRMLoginPageElements.password).sendKeys("DivideBuy2019");
+		elementFtech.getWebElement("XPATH", CRMLoginPageElements.password).sendKeys("password");
 	}
 	public void CRMLogout() {
 		//ElelmentFetch elementFtech = new ElelmentFetch();

@@ -2,52 +2,52 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="56574" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:49:11 IST">
+  <suite name="Suite" duration-ms="77569" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:35:04 IST">
     <groups>
     </groups>
-    <test name="DivideBuy Test Automation CRM" duration-ms="101" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+    <test name="DivideBuy Test Automation CRM" duration-ms="537" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
       <class name="main.java.Test.CRMTestClass">
-        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.CRMTestClass@c81cdd1]" name="Report" is-config="true" duration-ms="91" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.CRMTestClass@150c158]" name="Report" is-config="true" duration-ms="498" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.CRMTestClass@c81cdd1]" name="flushReport" is-config="true" duration-ms="2" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.CRMTestClass@150c158]" name="flushReport" is-config="true" duration-ms="6" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- main.java.Test.CRMTestClass -->
     </test> <!-- DivideBuy Test Automation CRM -->
-    <test name="DivideBuy Test Automation Portal" duration-ms="4" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+    <test name="DivideBuy Test Automation Portal" duration-ms="6" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
       <class name="main.java.Test.PortalTestClass">
-        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.PortalTestClass@5c18298f]" name="Report" is-config="true" duration-ms="2" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.PortalTestClass@4516af24]" name="Report" is-config="true" duration-ms="5" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.PortalTestClass@5c18298f]" name="flushReport" is-config="true" duration-ms="1" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.PortalTestClass@4516af24]" name="flushReport" is-config="true" duration-ms="0" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- main.java.Test.PortalTestClass -->
     </test> <!-- DivideBuy Test Automation Portal -->
-    <test name="DivideBuy Test Automation RCAdmin" duration-ms="3" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+    <test name="DivideBuy Test Automation RCAdmin" duration-ms="7" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
       <class name="main.java.Test.RCAdminTestClass">
-        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.RCAdminTestClass@2fd66ad3]" name="Report" is-config="true" duration-ms="3" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.RCAdminTestClass@7e9a5fbe]" name="Report" is-config="true" duration-ms="4" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.RCAdminTestClass@2fd66ad3]" name="flushReport" is-config="true" duration-ms="0" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.RCAdminTestClass@7e9a5fbe]" name="flushReport" is-config="true" duration-ms="1" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- main.java.Test.RCAdminTestClass -->
     </test> <!-- DivideBuy Test Automation RCAdmin -->
-    <test name="DivideBuy Test Automation Checkout" duration-ms="56436" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:49:11 IST">
-      <class name="main.java.Test.CheckoutTestClass">
-        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286]" name="Report" is-config="true" duration-ms="2" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:14 IST">
+    <test name="DivideBuy Test Automation Checkout" duration-ms="76930" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:35:04 IST">
+      <class name="main.java.Test.V5CheckoutTestClass">
+        <test-method status="PASS" signature="Report()[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa]" name="Report" is-config="true" duration-ms="3" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286]" name="initializeBrowser" is-config="true" duration-ms="3662" started-at="2021-12-03T15:48:14 IST" finished-at="2021-12-03T15:48:18 IST">
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa]" name="initializeBrowser" is-config="true" duration-ms="11201" started-at="2021-12-05T20:33:47 IST" finished-at="2021-12-05T20:33:58 IST">
           <params>
             <param index="0">
               <value>
@@ -56,38 +56,38 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://moduleinstalledmagento1.dbuytest.info/]]>
+                <![CDATA[https://wordpress.dividebuy-qa.info/]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void main.java.Test.CheckoutTestClass.Checkout() throws java.lang.ClassNotFoundException,java.sql.SQLException,java.lang.InterruptedException]]>
+                <![CDATA[public void main.java.Test.V5CheckoutTestClass.Checkout() throws java.lang.ClassNotFoundException,java.sql.SQLException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="Checkout()[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286]" name="Checkout" duration-ms="51857" started-at="2021-12-03T15:48:18 IST" finished-at="2021-12-03T15:49:10 IST">
+        <test-method status="PASS" signature="Checkout()[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa]" name="Checkout" duration-ms="64029" started-at="2021-12-05T20:33:58 IST" finished-at="2021-12-05T20:35:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Checkout -->
-        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286]" name="driverQuit" is-config="true" duration-ms="699" started-at="2021-12-03T15:49:10 IST" finished-at="2021-12-03T15:49:11 IST">
+        <test-method status="PASS" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa]" name="driverQuit" is-config="true" duration-ms="899" started-at="2021-12-05T20:35:03 IST" finished-at="2021-12-05T20:35:03 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Checkout status=SUCCESS method=CheckoutTestClass.Checkout()[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286] output={null}]]]>
+                <![CDATA[[TestResult name=Checkout status=SUCCESS method=V5CheckoutTestClass.Checkout()[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.CheckoutTestClass@10d59286]" name="flushReport" is-config="true" duration-ms="193" started-at="2021-12-03T15:49:11 IST" finished-at="2021-12-03T15:49:11 IST">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:main.java.Test.V5CheckoutTestClass@61ca2dfa]" name="flushReport" is-config="true" duration-ms="717" started-at="2021-12-05T20:35:03 IST" finished-at="2021-12-05T20:35:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- main.java.Test.CheckoutTestClass -->
+      </class> <!-- main.java.Test.V5CheckoutTestClass -->
     </test> <!-- DivideBuy Test Automation Checkout -->
   </suite> <!-- Suite -->
 </testng-results>

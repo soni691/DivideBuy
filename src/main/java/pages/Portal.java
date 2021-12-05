@@ -11,7 +11,7 @@ import main.java.utils.ElelmentFetch;
 
 public class Portal extends BaseTest {
 	ElelmentFetch elementFtech = new ElelmentFetch();
-	public void clickonPortalLogin() {
+	public void clickonPortalLogin() throws InterruptedException {
 		//ElelmentFetch elementFtech = new ElelmentFetch();
 		BaseTest.logger.info("Clicking on Signin Button");
 		elementFtech.getWebElement("XPATH", PortalPageElements.Portallogin).click();
@@ -19,11 +19,12 @@ public class Portal extends BaseTest {
 		String TxtBoxContent = driver.findElement(By.xpath("//button[@id='btnSave']")).getText();
 		System.out.println(TxtBoxContent);
 		Assert.assertEquals(TxtBoxContent,"Add New Retailer");
+		Thread.sleep(2000);
 	}
 	
 	public void enterPortalEmail() {
 		BaseTest.logger.info("Entering EmailId");
-		elementFtech.getWebElement("XPATH", PortalPageElements.PortalEmail).sendKeys("kadmin@yopmail.com");
+		elementFtech.getWebElement("XPATH", PortalPageElements.PortalEmail).sendKeys("padmin@dividebuy.co.uk");
 	}
 	public void enterPortalPassword() {
 		BaseTest.logger.info("Entering Password");

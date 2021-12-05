@@ -6,30 +6,30 @@
 	</listeners>
 	<test name="DivideBuy Test Automation CRM">
 		<parameter name="browserName" value="chrome" />
-		<parameter name="url" value="https://crm.dividebuysandbox.co.uk" />
+		<parameter name="url" value="https://crm.dividebuy-qa.info/login" />
 		<classes>
 			<class name="main.java.Test.CRMTestClass" />
 		</classes>
 	</test>
 	<test name="DivideBuy Test Automation Portal">
 		<parameter name="browserName" value="chrome" />
-		<parameter name="url" value="https://portal.dividebuysandbox.co.uk/" />
+		<parameter name="url" value="https://v4portal.dividebuy-qa.info/" />
 		<classes>
 			<class name="main.java.Test.PortalTestClass" />
 		</classes>
 	</test>
 	<test name="DivideBuy Test Automation RCAdmin">
 		<parameter name="browserName" value="chrome" />
-		<parameter name="url" value="https://rcadminsandbox.co.uk/" />
+		<parameter name="url" value="http://rcadmin.dividebuy-qa.info/auth/index" />
 		<classes>
 			<class name="main.java.Test.RCAdminTestClass" />
 		</classes>
 	</test>
 	<test name="DivideBuy Test Automation Checkout">
 		<parameter name="browserName" value="chrome" />
-		<parameter name="url" value="https://moduleinstalledmagento1.dbuytest.info/" />
+		<parameter name="url" value="https://wordpress.dividebuy-qa.info/" />
 		<classes>
-			<class name="main.java.Test.CheckoutTestClass" />
+			<class name="main.java.Test.V5CheckoutTestClass" />
 		</classes>
 	</test>
 

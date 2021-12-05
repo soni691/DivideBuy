@@ -6,17 +6,17 @@
   </listeners>
   <test thread-count="5" name="DivideBuy Test Automation Checkout(failed)">
     <parameter name="browserName" value="chrome"/>
-    <parameter name="url" value="https://moduleinstalledmagento1.dbuytest.info/"/>
+    <parameter name="url" value="https://wordpress.dividebuy-qa.info/"/>
     <classes>
-      <class name="main.java.Test.CheckoutTestClass">
+      <class name="main.java.Test.V5CheckoutTestClass">
         <methods>
           <include name="driverQuit"/>
-          <include name="Checkout"/>
           <include name="flushReport"/>
+          <include name="Checkout"/>
           <include name="Report"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- main.java.Test.CheckoutTestClass -->
+      </class> <!-- main.java.Test.V5CheckoutTestClass -->
     </classes>
   </test> <!-- DivideBuy Test Automation Checkout(failed) -->
 </suite> <!-- Failed suite [Suite] -->

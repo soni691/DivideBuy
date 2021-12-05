@@ -12,7 +12,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -101,7 +104,9 @@ public class BaseTest {
 	public void setupDriver(String browserName) {
 		if(browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers" +"/chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions handlingSSL = new ChromeOptions();
+			handlingSSL.setAcceptInsecureCerts(true);
+			driver = new ChromeDriver(handlingSSL);
 		}
 		else if(browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers" +"/geckodriver.exe");

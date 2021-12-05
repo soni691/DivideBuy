@@ -11,7 +11,7 @@ public class RCAdminTestClass extends BaseTest {
 	
 	@Parameters({ "url" })
 	@Test(enabled=false)
-	public void RCAdmiLogin() {
+	public void RCAdmiLogin() throws InterruptedException {
 		RCadmin rcadminLogin = new RCadmin();
 		rcadminLogin.enterEmail();
 		rcadminLogin.enterPassword();

@@ -14,7 +14,7 @@ public class PortalTestClass extends BaseTest {
 		Portal portal= new Portal();
 		portal.enterPortalEmail();
 		portal.enterPortalPassword();
-		portal.enterPortalPIN();
+		//portal.enterPortalPIN();
 		portal.clickonPortalLogin();
 		portal.Portallogout();
 	}
