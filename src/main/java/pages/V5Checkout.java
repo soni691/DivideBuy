@@ -1,5 +1,7 @@
 package main.java.pages;
 
+import static org.testng.Assert.assertEquals;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,6 +11,7 @@ import java.sql.Statement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -24,12 +27,20 @@ public class V5Checkout extends BaseTest {
 	public String otp;
 
 	public void SearchProduct() {
-		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.RetailerProductSearchBar).sendKeys("Testing Product");
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.RetailerProductSearchBar).sendKeys(excelReader.getCellData("Customer_Details", 8, 2));
 		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.RetailerProductSearchBar).sendKeys(Keys.ENTER);
 	}
 
 	public void clickonProduct() {
+		//String shtproduct= excelReader.getCellData("Customer_Details", 8, 2);
+		//String xpath = String.format("//a[@aria-label='Add \\“%s\\” to your cart']", shtproduct);
+		//String xpath1 = xpath.replaceAll("\\"," ");
+		//System.out.println(xpath1);
+		//elementFtech.getWebElement("XPATH", xpath).click();
 		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.TestProduct).click();
+	}
+	public void viewcartProduc() {
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.productViewpage).click();
 	}
 
 	public void clickonAddtoCartbutton() throws InterruptedException {
@@ -104,8 +115,7 @@ public class V5Checkout extends BaseTest {
 		BaseTest.logger.info("Entering Customer Details");
 
 		// driver.switchTo().frame(0);
-		// elementFtech.getWebElement("XPATH",
-		// CheckoutPageElements.iframeclosebutton).click();
+		// elementFtech.getWebElement("XPATH",CheckoutPageElements.iframeclosebutton).click();
 		// driver.switchTo().defaultContent();
 		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.Title).click();
 		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.MrTitle).click();
@@ -124,10 +134,81 @@ public class V5Checkout extends BaseTest {
 		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.VerifyOtP).click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement element = driver.findElement(By.xpath(CheckoutPageElements.Next));
+		WebElement element = driver.findElement(By.xpath(V5CheckoutPageElements.Next));
 		js.executeScript("arguments[0].scrollIntoView();", element);
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.Next).click();
 		Thread.sleep(10000);
+	}
+	
+	public void clickonAgreePay() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = driver.findElement(By.xpath(V5CheckoutPageElements.AgreeAndPay));
+		js.executeScript("arguments[0].scrollIntoView();", element);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.AgreeAndPay).click();
+	}
+	
+	public void enterCreditCarddetails() throws InterruptedException {
+		//SagePay card
+		//elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardNumber).sendKeys("4929000000006");
+	//	elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardYear).click();
+	//	elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardYear23).click();
+		//elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardCVV).sendKeys("123");
+		//elementFtech.getWebElement("XPATH", V5CheckoutPageElements.completePurchase).click();	
+		
+		//DNA Card
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardNumber).sendKeys(excelReader.getCellData("Customer_Details", 9, 2));
+		Thread.sleep(2000);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardYear).click();
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardYear23).click();
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.cardCVV).sendKeys("123");
+		Thread.sleep(3000);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.completePurchase).click();	
+		Thread.sleep(35000);
+	}
+	
+	public void enter3dSecurepwd() {
+		driver.switchTo().activeElement();
+		driver.switchTo().frame("sagepayFrame");
+		//elementFtech.getWebElement("XPATH",CheckoutPageElements.iframeclosebutton).click();
+		//driver.switchTo().defaultContent();
+		System.out.println(V5CheckoutPageElements.threedPassword);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.threedPassword).sendKeys("password");	
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.threedSubmit).click();
+	}
+	
+	public void enter3dsecurepopup() throws InterruptedException {
+		
+		WebElement iframeElement=driver.findElement(By.xpath("//*[@id=\"sagepayFrame\"]"));
+	    driver.switchTo().frame(iframeElement);
+		//driver.switchTo().activeElement();
+		//driver.switchTo().frame("sagepayFrame");
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.threedPassword).sendKeys("challenge");	
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.popup3dnext).click();
+		Thread.sleep(7000);
+		driver.switchTo().defaultContent();
+		String confirmation=elementFtech.getWebElement("XPATH", V5CheckoutPageElements.OrderConfirmation).getText();
+		assertEquals(confirmation,"YOUR ORDER HAS BEEN RECEIVED.");		
+	}
+	public void ExistingCustomer() throws ClassNotFoundException, SQLException, InterruptedException {
+		try {
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.ExistingNext).click();
+		getOTP();
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.EnterOtp).sendKeys(otp);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.VerifyOtP).click();
+		Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = driver.findElement(By.xpath(V5CheckoutPageElements.Next));
+		js.executeScript("arguments[0].scrollIntoView();", element);
+		elementFtech.getWebElement("XPATH", CheckoutPageElements.Next).click();
+		clickonAgreePay();
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.ExistingCVV).sendKeys("123");
+		Thread.sleep(2000);
+		elementFtech.getWebElement("XPATH", V5CheckoutPageElements.completePurchase).click();
+		Thread.sleep(9000); }
+		catch(WebDriverException e) {
 
+e.printStackTrace();
+
+}
 	}
 }

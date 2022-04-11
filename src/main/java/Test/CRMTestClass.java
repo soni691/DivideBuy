@@ -23,4 +23,15 @@ public class CRMTestClass extends BaseTest {
 		crmLogin.clickonLogin();
 		crmLogin.CRMLogout();
 	}
+	
+	@Test(enabled=false)
+	@Parameters({ "url" })
+	public void CRMUpdatePassword(String url) throws InterruptedException {
+		CRMLogin crmLogin = new CRMLogin();
+		crmLogin.enterEmail();
+		crmLogin.enterPassword();
+		crmLogin.clickonLogin();
+		crmLogin.CRMSearchCustomer();
+		crmLogin.CRMCustUpdatePassword();
+	}
 }

@@ -6,7 +6,7 @@
   </listeners>
   <test thread-count="5" name="DivideBuy Test Automation Checkout(failed)">
     <parameter name="browserName" value="chrome"/>
-    <parameter name="url" value="https://wordpress.dividebuy-qa.info/"/>
+    <parameter name="url" value="https://cleanmagento1qa.dbuytest.info/"/>
     <classes>
       <class name="main.java.Test.V5CheckoutTestClass">
         <methods>

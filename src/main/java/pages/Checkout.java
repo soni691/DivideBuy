@@ -14,26 +14,32 @@ import org.openqa.selenium.interactions.Actions;
 import main.java.Base.BaseTest;
 import main.java.pageObjects.CheckoutPageElements;
 import main.java.utils.ElelmentFetch;
+import main.java.utils.ExcelReader;
 
 public class Checkout extends BaseTest{
 	ElelmentFetch elementFtech = new ElelmentFetch();
+	ExcelReader excelReader = new ExcelReader(System.getProperty("user.dir") + "/TestData" + "/DVB_Testdata.xlsx");
 	public String otp;
 	
 	public void URLAuthentication() {
-		driver.get("https://dbuytest:O6jdmP$sqma68Ccd@moduleinstalledmagento1.dbuytest.info/");
+		driver.get("https://dbuytest:O6jdmP$sqma68Ccd@squarefashionqa.dbuytest.info");
 	}
 
 	public void hover() {
 	Actions action = new Actions(driver);	
-	WebElement TxtBoxContent = driver.findElement(By.xpath("//a[normalize-space()='Home & Decor']"));
+	WebElement TxtBoxContent = driver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[4]/a"));
+	
 	//Performing the mouse hover action on the target element.
 	action.moveToElement(TxtBoxContent).perform();
+	TxtBoxContent.click();
 	}
 	
 	public void clickonBed() {
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.RetailerBedBathMenu).click();
 	}
-	
+	public void clickonElectronics() {
+		elementFtech.getWebElement("XPATH", CheckoutPageElements.RetailerElectronicsMenu).click();
+	}
 	public void clickonProduct() {
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.RetailertestProduct).click();
 	}
@@ -71,11 +77,29 @@ public class Checkout extends BaseTest{
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.Next).click();
 		Thread.sleep(3000);
 	}
-	public void getOTP() throws ClassNotFoundException, SQLException {
-		String dbUrl = "jdbc:mysql://dividebuysandbox.co.uk:3306/dbsbV4_laravel";
-		String dbusername ="sumit-dvbsanddb";
-		String dbpassword="tOons*bnRMu14i8p";
-		String query = "SELECT * FROM otp_log where contact_number = 07458303401 order by id desc limit 1";
+	public void SBgetOTP() throws ClassNotFoundException, SQLException {
+		String dbUrl = "jdbc:mysql://v5-qa-database.c1sghtuv3sp4.eu-west-2.rds.amazonaws.com:3306/customers";
+		String dbusername = "dividebuy";
+		String dbpassword = "FBkyQNmFUnJnmHMhe3vc0z58m9KsSvS0MBxX8Q4ko";
+		String DBNumber= excelReader.getCellData("Customer_Details", 6, 2);
+		String query = "SELECT * FROM otp_logs where contact_number = ("+DBNumber+") order by id desc limit 1";
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection(dbUrl, dbusername, dbpassword);
+		Statement stmt = con.createStatement();
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			otp = rs.getString(5);
+			// String myAge = rs.getString(2);
+			System.out.println("otp is + " + otp);
+		}
+		con.close();
+	}
+	
+	public void V5getOTP() throws ClassNotFoundException, SQLException {
+		String dbUrl = "jdbc:mysql://v5-qa-database.c1sghtuv3sp4.eu-west-2.rds.amazonaws.com:3306/customers";
+		String dbusername ="dividebuy";
+		String dbpassword="FBkyQNmFUnJnmHMhe3vc0z58m9KsSvS0MBxX8Q4ko";
+		String query = "SELECT * FROM otp_logs where contact_number = 07458303401 order by id desc limit 1";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(dbUrl,dbusername,dbpassword);
 		Statement stmt = con.createStatement();
@@ -103,7 +127,7 @@ public class Checkout extends BaseTest{
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.Income).sendKeys("999999");
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.MobileNumber).sendKeys("07458303401");
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.MobileVerify).click();
-		getOTP();
+		SBgetOTP();
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.EnteryOtp).sendKeys(otp);
 		elementFtech.getWebElement("XPATH", CheckoutPageElements.VerifyOtP).click();
 		Thread.sleep(5000);

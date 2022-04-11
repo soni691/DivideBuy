@@ -1,17 +1,18 @@
 package main.java.pageObjects;
 
 public interface V5CheckoutPageElements {
-	String RetailerProductSearchBar ="//input[@id='woocommerce-product-search-field-0']" ;
-	String TestProduct="//a[@href='https://wordpress.dividebuy-qa.info/product/testing-product/']//img[@alt='Placeholder']";
-	String addtoCart ="//button[normalize-space()='Add to cart']";
+	String RetailerProductSearchBar ="//input[@id='search']" ;
+	String TestProduct="//h2[contains(text(),'Heart Custom T Shirts')]";
+	String SheetTestProduct ="//a[@aria-label='Add '%s' to your cart']";
+	String addtoCart ="//button[contains(text(),'Add to cart')]";
 	String ViewCart ="//div[@role='alert']//a[@class='button wc-forward'][normalize-space()='View cart']";
 	String paywithDividebuy ="//span[@class='dividebuy-spreadcost']";
 	String PostCode ="//input[@id='user_postcode']";
 	String ViewOptions ="//a[@id='get_shipping_estimate']";
-	String FreeShipping = "//label[normalize-space()='Free shipping']//div[@class='control__indicator']";
+	String FreeShipping = "//label[normalize-space()='Free shipping']";
 	String Checkout = "//a[@id='dividebuy_checkout_btn']";
 	String EMIOptiondropdown ="//select[@id='ddlMonths']";
-	String ThreeMonthEmi ="//*[@id=\"ddlMonths\"]/option[5]";
+	String ThreeMonthEmi ="//*[@id=\"ddlMonths\"]/option[1]";
 	String CustomerEmail ="//input[@id='emailAddress']";
 	String Next ="//button[contains(text(),'Next')]";
 	String Title="//select[@id='ddlTitle']";
@@ -28,4 +29,17 @@ public interface V5CheckoutPageElements {
 	String Postcode ="//input[@id='user_postcode']";
 	String EnterOtp = "//input[@id='otp']";
 	String VerifyOtP ="//div[contains(@class,'text-center col-9 col-md-10 mx-auto form-group')]//button[@type='button'][normalize-space()='Verify']";
+	String productViewpage ="//a[@title='View cart']";
+	String AgreeAndPay = "//button[normalize-space()='Agree And Pay']";
+	String cardNumber ="//input[@id='cardNumber']";
+	String cardYear="//select[@id='ddlYear']";
+	String cardYear23 ="//*[@id=\"ddlYear\"]/option[1]";
+	String cardCVV = "//input[@id='cvv']";
+	String completePurchase ="//button[normalize-space()='Complete Purchase']";
+	String threedPassword ="//*[@id=\"cd\"]";  
+	String threedSubmit ="//*[@id=\"submit-button\"]";
+	String popup3dnext ="//*[@id=\"challengeForm\"]/input[4]";
+	String OrderConfirmation = "//h1[contains(text(),'Your order has been received.')]";
+	String ExistingNext = "//button[contains(text(),'Next')]";
+	String ExistingCVV = "//input[@id='cardCvv']";
 }

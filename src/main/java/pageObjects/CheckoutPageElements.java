@@ -2,8 +2,9 @@ package main.java.pageObjects;
 
 public interface CheckoutPageElements {
 	String RetailerHomeMenu ="//a[normalize-space()='Home & Decor']" ;
-	String RetailerBedBathMenu ="//a[normalize-space()='Bed & Bath']";
-	String RetailertestProduct="//a[normalize-space()='KT Product &*@test']";
+	String RetailerBedBathMenu ="//span[normalize-space()='Bed & Bath']";
+	String RetailerElectronicsMenu ="//a[contains(text(),'Electronics')]";
+	String RetailertestProduct="//a[contains(text(),'Gramercy Throw')]";
 	String RetailerprodetailAddtocart = "//button[@onclick='productAddToCartForm.submit(this)']//span//span[contains(text(),'Add to Cart')]";
 	String PaywithDVBbutton= "//span[@class='dividebuy-spreadcost']";
 	String CartContinueasGuestbutton= "//button[@id='btn_continue_guest']";
@@ -12,7 +13,7 @@ public interface CheckoutPageElements {
 	String FreeShipping = "//label[normalize-space()='Free']";
 	String Checkout = "//a[@id='dividebuy_checkout_btn']";
 	String EMIOptiondropdown ="//select[@id='ddlMonths']";
-	String ThreeMonthEmi ="//option[contains(text(),'3 Months')]";
+	String ThreeMonthEmi ="//option[contains(text(),'4 Months')]";
 	String CustomerEmail ="//input[@id='emailAddress']";
 	String Next ="//button[contains(text(),'Next')]";
 	String EnteryOtp = "//input[@id='otp']";

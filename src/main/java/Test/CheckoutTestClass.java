@@ -9,16 +9,14 @@ import main.java.Base.BaseTest;
 import main.java.pages.Checkout;
 
 public class CheckoutTestClass extends BaseTest {
-	@Test(enabled = false)
+	@Test(enabled = true)
 	@Parameters({ "url" })
 	public void Checkout() throws ClassNotFoundException, SQLException, InterruptedException {
 		
-		  Checkout checkout = new Checkout();
-		  
+		  Checkout checkout = new Checkout();	  
 		  checkout.URLAuthentication(); 
 		  checkout.hover();
-		  checkout.clickonBed();
-		  
+		  checkout.clickonBed();	  
 		  checkout.clickonProduct(); 
 		  checkout.clickonAddtoCartbutton();
 		  checkout.clickonPaywithDVBbutton();
@@ -27,7 +25,7 @@ public class CheckoutTestClass extends BaseTest {
 		  checkout.SelectDeliveryOption();
 		  checkout.selectEMI();
 		  checkout.EnterCustEmailId();
-		  checkout.enterCustDetails();
-		 
+		  checkout.enterCustDetails();	
+		  checkout.V5getOTP();
 	}
 }

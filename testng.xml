@@ -27,9 +27,16 @@
 	</test>
 	<test name="DivideBuy Test Automation Checkout">
 		<parameter name="browserName" value="chrome" />
-		<parameter name="url" value="https://wordpress.dividebuy-qa.info/" />
+		<parameter name="url" value="https://cleanmagento1qa.dbuytest.info/" />
 		<classes>
 			<class name="main.java.Test.V5CheckoutTestClass" />
+		</classes>
+	</test>
+	<test name="DivideBuy Test Automation Account">
+		<parameter name="browserName" value="chrome" />
+		<parameter name="url" value="https://v4accounts.dividebuy-qa.info/" />
+		<classes>
+			<class name="main.java.Test.AccountTest" />
 		</classes>
 	</test>
 
